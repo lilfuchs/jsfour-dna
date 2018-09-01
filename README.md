@@ -14,9 +14,9 @@ For this to work, you need to do the following:
  For the script to work, you need to use ESX.
  1. Insert the script into your resource folder and then add it to your server.cfg to start it
 2. Enter the table in the database (jsfour_dna.sql)
-3. The script is based on the existence of load pointers in your database. There are 4 numbers that are unique to each player. This is something you must add. Either via a script that does it for you or you can do it manually for each player. My <a href="https://github.com/jonassvensson4/jsfour-register"> jsfour registry <a/> does this when registering.
+3. The script is based on the existence of load pointers in your database. There are 4 numbers that are unique to each player. This is something you must add. Either via a script that does it for you or you can do it manually for each player. My <a href="https://github.com/lilfuchs/jsfour-register"> jsfour registry <a/> does this when registering.
 4. These are code bits that will enter a menu, depending on how your menu looks like:
- `` `
+ ```
 {label = 'DNA', value = 'dna'}
  if data.current.value == 'dna' then
   local player, distance = ESX.Game.GetClosestPlayer ()
@@ -27,8 +27,10 @@ For this to work, you need to do the following:
 End
  - There is also an event to remove the DNA you have on you. Even this is recommended to have in a menu
 Trigger Event ( 'jsfour DNA remove')
-`` `
- ### SCREENSHOTS
+```
+
+
+### SCREENSHOTS
 [Screenshot] (https://i.gyazo.com/0e38567915f677da7746ff263a8c74ba.png)
 [Screenshot] (https://i.gyazo.com/72b115711470c1d86c1ced2cc4004fd9.png)
 [Screenshot] (https://i.gyazo.com/54333c35e9eb68b5072ecf572f0ff496.png)
