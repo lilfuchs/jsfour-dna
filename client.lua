@@ -5,21 +5,21 @@ local killername 	= nil
 local deadname 		= nil
 local dna 				= {}
 local weapons = {
-	[-1569615261] = {name = 'WEAPON_UNARMED', hash = 2725352035, text = 'Knytnäve'},
-	[-1716189206] = {name = 'WEAPON_KNIFE', hash = 2578778090, text = 'Kniv'},
-	[1737195953]  = {name = 'WEAPON_NIGHTSTICK', hash = 1737195953, text = 'Batong'},
-	[2508868239]  = {name = 'WEAPON_BAT', hash = 2508868239, text = 'Basebollträ'},
-	[1317494643]  = {name = 'WEAPON_HAMMER', hash = 1317494643, text = 'Hammare'},
-	[1141786504]  = {name = 'WEAPON_GOLFCLUB', hash =1141786504, text = 'Golfklubba'},
-	[2227010557]  = {name = 'WEAPON_CROWBAR', hash =2227010557, text = 'Kofot'},
-	[2460120199]  = {name = 'WEAPON_DAGGER', hash =2460120199, text = 'Dolk'},
-	[3638508604]  = {name = 'WEAPON_KNUCKLE', hash =3638508604, text = 'Knogjärn'},
-	[4191993645]  = {name = 'WEAPON_HATCHET', hash =4191993645, text = 'Yxa'},
+	[-1569615261] = {name = 'WEAPON_UNARMED', hash = 2725352035, text = 'Unarmed'},
+	[-1716189206] = {name = 'WEAPON_KNIFE', hash = 2578778090, text = 'Knife'},
+	[1737195953]  = {name = 'WEAPON_NIGHTSTICK', hash = 1737195953, text = 'Baton'},
+	[2508868239]  = {name = 'WEAPON_BAT', hash = 2508868239, text = 'Baseball Bat'},
+	[1317494643]  = {name = 'WEAPON_HAMMER', hash = 1317494643, text = 'Hammer'},
+	[1141786504]  = {name = 'WEAPON_GOLFCLUB', hash =1141786504, text = 'Golf Club'},
+	[2227010557]  = {name = 'WEAPON_CROWBAR', hash =2227010557, text = 'Crowbar'},
+	[2460120199]  = {name = 'WEAPON_DAGGER', hash =2460120199, text = 'Dagger'},
+	[3638508604]  = {name = 'WEAPON_KNUCKLE', hash =3638508604, text = 'Brass Knuckles'},
+	[4191993645]  = {name = 'WEAPON_HATCHET', hash =4191993645, text = 'Hatchet'},
 	[3713923289]  = {name = 'WEAPON_MACHETE', hash =3713923289, text = 'Machete'},
-	[3756226112]  = {name = 'WEAPON_SWITCHBLADE', hash =3756226112, text = 'Fickkniv'},
-	[3441901897]  = {name = 'WEAPON_BATTLEAXE', hash =3441901897, text = 'Yxa'},
-	[2484171525]  = {name = 'WEAPON_POOLCUE', hash =2484171525, text = 'Biljardkö'},
-	[419712736]   = {name = 'WEAPON_WRENCH', hash =419712736, text = 'Skiftnyckel'}
+	[3756226112]  = {name = 'WEAPON_SWITCHBLADE', hash =3756226112, text = 'Knife'},
+	[3441901897]  = {name = 'WEAPON_BATTLEAXE', hash =3441901897, text = 'Axe'},
+	[2484171525]  = {name = 'WEAPON_POOLCUE', hash =2484171525, text = 'Pool stick'},
+	[419712736]   = {name = 'WEAPON_WRENCH', hash =419712736, text = 'Wrench'}
 }
 local inMarker = false
 local PlayerData = {}
@@ -112,16 +112,16 @@ AddEventHandler('jsfour-dna:get', function( player )
 
 			if weapon ~= nil then
 				dna = {k = killername, d = GetPlayerServerId(player), w = weapon, p = killerid}
-				ESX.ShowNotification('Tog DNA-prov från en brottsplats..')
+				ESX.ShowNotification('Took DNA samples from a crime scene..')
 			else
-				ESX.ShowNotification('Hittade inget spår av DNA..')
+				ESX.ShowNotification('Found no traces of DNA..')
 			end
 		else
 			dna = {k = nil, d = nil, w = nil, p = GetPlayerServerId(player)}
 			ESX.ShowNotification('Tog DNA-prov från en person..')
 		end
 	else
-		ESX.ShowNotification('Du har redan ett DNA på dig, lämna in det först..')
+		ESX.ShowNotification('You already have a DNA on you, submit it first..')
 	end
 end)
 
